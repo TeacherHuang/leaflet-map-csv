@@ -68,7 +68,11 @@
       var row = data[i];
 
       var marker = L.marker([row.Latitude, row.Longitude], {
-        opacity: 1
+        opacity: 1,
+        // Customize your icon
+        icon: L.icon({
+          iconUrl: 'path/to/your/icon.png',
+          iconSize: [40, 60]
       }).bindPopup(row.Title);
       
       marker.addTo(map);
